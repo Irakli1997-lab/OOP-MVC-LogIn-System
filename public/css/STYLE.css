@@ -1,0 +1,455 @@
+/* OOP MVC LogIn System */
+/* Irakli Gzirishvili */
+/* 15/10/2021 */
+
+/* Settings */
+.hop:hover{opacity: 0.5;}
+.form{left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;}
+.form_lbl{position: absolute;
+    width: 511px;
+    height: 84px;
+    left: 24px;
+    top: 17px;
+    font-family: 'Prompt';
+    font-size: 50px;
+    line-height: 77px;
+    cursor: default;
+    text-align: center;
+    color: #272727;}
+.input{border: 0px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.05em;
+    color: #7B7B7B;
+    border-radius: 10px;
+    background: #272727;}
+.submit{border: 0px;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #40885A;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #272727;}
+.submit:hover{opacity: 0.8;}
+
+/* Body */
+.b0{left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    background: #FFFFFF;}
+
+/* Header */
+#h0{position: absolute;
+    width: 559px;
+    height: 87px;
+    left: calc(50% - 559px/2);
+    top: 0px;
+    background: #4A4A4A;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);}
+#h0_lbl{position: absolute;
+    width: 559px;
+    height: 87px;
+    left: 0px;
+    top: 0px;
+    font-family: 'Prompt';
+    font-size: 38px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    color: #272727;}
+
+/* Section */
+#s0{position: absolute;
+    width: 559px;
+    height: 500px;
+    left: calc(50% - 559px/2);
+    top: calc(50% - 500px/2);
+    background: #4A4A4A;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px #000000;}
+
+/* Log In Page */
+#login_email{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 177px;}
+#login_password{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 237px;}
+#login_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+.login_recover{position: absolute;
+    width: 167px;
+    height: 45px;
+    left: 124px;
+    top: 282px;
+    border: 0px;
+    cursor: pointer;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #1E1E1E;
+    background: inherit;}
+.login_recover:hover{filter: invert(0.5);}
+.login_register{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 426px;
+    border: 0px;
+    cursor: pointer;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E1E1E;
+    background: inherit;}
+.login_register:hover{filter: invert(0.5);}
+
+/* Password Recover Page */
+#recover_name{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 177px;}
+#recover_email{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 237px;}
+#recover_code{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 271px;}
+#recover_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+.recover_lbl{position: absolute;
+    width: 559px;
+    height: 87px;
+    left: 0px;
+    top: 120px;
+    font-family: 'Prompt';
+    font-size: 38px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    color: #272727;}
+.recover_back{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 426px;
+    border: 0px;
+    cursor: pointer;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E1E1E;
+    background: inherit;}
+.recover_back:hover{color: #818181;}
+#recover_validate_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;
+    color: #b85440;}
+#recovery_newPass{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 177px;}
+#recovery_newPass_Repeate{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 237px;}
+#recover_restory_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+
+/* Registration Page */
+.register_photo{position: absolute;
+    width: 137px;
+    height: 137px;
+    left: 48px;
+    top: 135px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #272727;}
+#register_photo_img{width: 100%;}
+#register_img{display: none;}
+#register_img_btn{position: absolute;
+    width: 137px;
+    height: 45px;
+    left: 48px;
+    top: 288px;
+    border: 0px;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #408885;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #272727;}
+#register_img_btn:hover{opacity: 0.8;}
+#register_name{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 201px;
+    top: 135px;}
+#register_email{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 201px;
+    top: 186px;}
+#register_password{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 201px;
+    top: 237px;}
+#register_repeate_password{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 201px;
+    top: 288px;}
+#register_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+
+/* Account Page */
+#account_logOut{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 438px;
+    border: 0px;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1E1E1E;
+    background: inherit;}
+#account_logOut:hover{filter: invert(0.5);}
+.account_email{position: absolute;
+    width: 511px;
+    height: 38px;
+    left: 24px;
+    top: 109px;
+    font-family: 'Prompt';
+    font-size: 27px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration-line: underline;
+    cursor: default;
+    color: #272727;}
+.account_photo{position: absolute;
+    width: 137px;
+    height: 137px;
+    left: 211px;
+    top: 159px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #272727;
+    border-radius: 20px;}
+.account_photo_img{width: 100%;}
+.account_update_info{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 303px;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1E1E1E;}
+.account_update_info:hover{filter: invert(0.5);}
+.account_update_pass{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 348px;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1E1E1E;}
+.account_update_pass:hover{filter: invert(0.5);}
+.account_delete_account{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 393px;
+    font-family: 'Prompt';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #1E1E1E;}
+.account_delete_account:hover{filter: invert(0.5);}
+
+/* Update Information Page */
+#update_info_name{position: absolute;
+    width: 310px;
+    height: 40px;
+    left: 201px;
+    top: 135px;}
+#update_info_email{position: absolute;
+    width: 310px;
+    height: 40px;
+    left: 201px;
+    top: 184px;}
+#update_info_img{display: none;}
+#update_info_img_btn{position: absolute;
+    width: 310px;
+    height: 40px;
+    left: 201px;
+    top: 232px;
+    border: 0px;
+    font-family: 'Prompt';
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #408885;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #272727;}
+#update_info_img_btn:hover{opacity: 0.8;}
+#update_info_pass{position: absolute;
+    width: 310px;
+    height: 40px;
+    left: 124px;
+    top: 319px;}
+#update_info_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+
+/* Update Password Page */
+#update_pass_old{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 167px;}
+#update_pass_new{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 227px;}
+#update_pass_new_repeate{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 125px;
+    top: 287px;}
+#update_pass_submit{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 367px;}
+
+/* Delete Acoount Page */
+#delete_acc_pass{position: absolute;
+    width: 310px;
+    height: 45px;
+    left: 124px;
+    top: 271px;}
+
+/* Footer */
+#f0{position: absolute;
+    width: 559px;
+    height: 65px;
+    left: calc(50% - 559px/2);
+    bottom: 0px;
+    background: #4A4A4A;
+    border-radius: 30px 30px 0px 0px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);}
+.fo_lbl{position: absolute;
+    width: 370px;
+    height: 40px;
+    left: 18px;
+    top: 15px;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-size: 31px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    color: #272727;}
+.f0_ico1{position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 403px;
+    top: 17px;
+    cursor: pointer;}
+.f0_ico2{position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 456px;
+    top: 17px;
+    cursor: pointer;}
+.f0_ico3{position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 509px;
+    top: 17px;
+    cursor: pointer;}
